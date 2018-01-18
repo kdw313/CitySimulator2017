@@ -43,6 +43,13 @@ public class GridManager : MonoBehaviour {
 
 	public Dictionary<int, Dictionary<int,GameObject>> Grid = new Dictionary<int, Dictionary<int, GameObject>>();
 
+	void Update(){
+		if (Input.GetKey(KeyCode.Z)) {
+			gridOn = !gridOn;
+			turnEntireGrid (gridOn);
+		} 
+	}
+
 	/// <summary>
 	/// Creates the grid.
 	/// </summary>
@@ -63,7 +70,7 @@ public class GridManager : MonoBehaviour {
 				// set color index to GridColor to color the grid
 				cellPrefab.GetComponent<GridColor> ().colorIndex = int.Parse(type);
 				
-				MeshRenderer component = cellPrefab.GetComponent<MeshRenderer>();
+//				MeshRenderer component = cellPrefab.GetComponent<MeshRenderer>();
 				// component.material.mainTexture = roadTexture;
 
 				// creates each cell of the grid
@@ -83,7 +90,7 @@ public class GridManager : MonoBehaviour {
 			}
 		}
 
-		turnEntireGrid(true);
+		turnEntireGrid(gridOn);
 
 		return true;
 	}
@@ -109,7 +116,7 @@ public class GridManager : MonoBehaviour {
 				// set color index to GridColor to color the grid
 				cellPrefab.GetComponent<GridColor> ().colorIndex = int.Parse(type);
 				
-				MeshRenderer component = cellPrefab.GetComponent<MeshRenderer>();
+//				MeshRenderer component = cellPrefab.GetComponent<MeshRenderer>();
 				// component.material.mainTexture = roadTexture;
 
 				// creates each cell of the grid
@@ -176,7 +183,6 @@ public class GridManager : MonoBehaviour {
 		foreach (GameObject plane in planes) {
 			Transform planeTransform = plane.transform;
 			string type = planeTransform.GetChild(0).GetComponent<TextMesh>().text;
-
 
 			if(type == "0"){
 				MeshRenderer component = plane.GetComponent<MeshRenderer>();

@@ -83,10 +83,10 @@ public class DataManager{
 	/// </summary>
 	/// <returns>an Clock object.</returns>
 	public static Clock ReturnClockObj (string data) {
-		int netMinutes;
-		int netHours;
-		int netDays;
-		int netYears;
+//		int netMinutes;
+//		int netHours;
+//		int netDays;
+//		int netYears;
 
 		Clock clockObj = new Clock ();
 		//deserialize json string into object
@@ -104,9 +104,9 @@ public class DataManager{
 	/// </summary>
 	/// <returns>an Grid object.</returns>
 	public static GridObject ReturnGridObj (string data) {
-		string guid;
-		int xPoint;
-		int yPoint;
+//		string guid;
+//		int xPoint;
+//		int yPoint;
 
 		GridObject gridObj = new GridObject();
 		//deserialize json string into object
@@ -124,21 +124,21 @@ public class DataManager{
 	/// </summary>
 	/// <returns>an Person object.</returns>
 	public static Person ReturnPersonObj (string data) {
-		string guid;
-		string firstName;
-		string lastName;
-		int monthlyIncome;
-		int accountBalance;
-		string workPlaceID;
-		int workplaceX;
-		int workplaceY;
-		string homeID; 
-		int homeX;
-		int homeY;
-		int daysLeft;
-		int age;
-		int startShift;
-		int endShift;
+//		string guid;
+//		string firstName;
+//		string lastName;
+//		int monthlyIncome;
+//		int accountBalance;
+//		string workPlaceID;
+//		int workplaceX;
+//		int workplaceY;
+//		string homeID; 
+//		int homeX;
+//		int homeY;
+//		int daysLeft;
+//		int age;
+//		int startShift;
+//		int endShift;
 
 		Person personObj = new Person();
 		//deserialize json string into object
@@ -157,8 +157,8 @@ public class DataManager{
 	/// </summary>
 	/// <returns>an Product object.</returns>
 	public static Product ReturnProductObj (string data) {
-		string name;
-		int globalCount;
+//		string name;
+//		int globalCount;
 
 		Product productObj = new Product();
 		//deserialize json string into object

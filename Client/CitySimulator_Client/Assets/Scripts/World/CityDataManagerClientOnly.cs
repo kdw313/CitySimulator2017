@@ -191,11 +191,6 @@ public class CityDataManagerClientOnly : MonoBehaviour {
         // updateTheCity = true;
     }
 
-    private void GetDatabaseResource()
-    {
-
-    }
-
     /// <summary>
     // Awake this instance.
     /// </summary>
@@ -225,7 +220,7 @@ public class CityDataManagerClientOnly : MonoBehaviour {
     // Start this instance.
     /// </summary>
     void Start () {
-        InvokeRepeating("GetCityUpdate", 60.0f, 60.0f);
+        //InvokeRepeating("GetCityUpdate", 60.0f, 60.0f);
     }
 
     /// <summary>
@@ -240,7 +235,6 @@ public class CityDataManagerClientOnly : MonoBehaviour {
 
             if(gridManager.GetComponent<GridManager>().updateEntireGridForClient()){
 
-                
                  updateCityForTest();
             }
             runOnce2 = false;
@@ -315,8 +309,8 @@ public class CityDataManagerClientOnly : MonoBehaviour {
                                                                                 rate );
                 }
 
-                if(x < 24 && z < 13)
-                if(grid[x][z] == 0) {
+                if(x < 24 && z < 13
+                && grid[x][z] == 0) {
                     characterManager.GetComponent<CharacterCreation>().createCharacter("TEST PERSON" + indexP++, x, z, 24, 13);
                 }
             }
