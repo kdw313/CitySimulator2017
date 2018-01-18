@@ -61,7 +61,7 @@ public class CityDataManagerClientOnly : MonoBehaviour {
     // Store human references here for easy access
     private Dictionary<int, GameObject> humans = new Dictionary<int, GameObject>();
 
-    public bool runOnce2 = false;
+    public bool runOnce2 = true;
 
 
     /// <summary>
@@ -301,7 +301,7 @@ public class CityDataManagerClientOnly : MonoBehaviour {
             for (int z = 0; z < size_z; z++){
                 
                 if(grid[x][z] >= 1 && grid[x][z] <= 3){
-                    int rate = UnityEngine.Random.Range (0, 3);
+					int rate = UnityEngine.Random.Range (0, 3);
                     buildingManager.GetComponent<BuildingManager>().createBuilding("TEST BUILDING" + indexB++,
                                                                                 x,
                                                                                 z,

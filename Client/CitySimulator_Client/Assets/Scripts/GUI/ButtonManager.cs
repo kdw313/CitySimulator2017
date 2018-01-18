@@ -61,6 +61,13 @@ public class ButtonManager : MonoBehaviour {
     }
 
 	/// <summary>
+	/// Quits the smulator.
+	/// </summary>
+	public void quitSmulator() {
+		Application.Quit ();
+	}
+
+	/// <summary>
 	/// Refreshs the scene.
 	/// </summary>
 	public void refreshScene()

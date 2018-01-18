@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114444429273079552}
   - component: {fileID: 114628886079911906}
   m_Layer: 0
-  m_Name: TEST BUILDING372
+  m_Name: residential2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
